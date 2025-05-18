@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Alchemist's Cipher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+<header class="logo-background-container">
+    <h1>The Alchemist's Cipher</h1>
+    <p>Welcome, apprentice! Choose an algorithm to transmute your text.</p>
+</header>
+    <section class="container">
+        <h2>Select Cipher Algorithm</h2>
+        <select id="algorithmSelect">
+            <option value="caesar">Caesar Cipher</option>
+            <option value="vernam">Vernam Cipher</option>
+            <option value="vigenere">Vigenère Cipher</option>
+        </select>
+
+        <!-- Encryption Section -->
+        <div class="input-section">
+            <label for="plaintext">Original Text (Lead)</label>
+            <textarea id="plaintext" placeholder="Enter your message..."></textarea>
+
+            <label for="encryptKey">Key</label>
+            <input type="text" id="encryptKey" placeholder="Enter key for encryption" />
+
+            <button id="encryptBtn">Transmute</button>
+        </div>
+
+        <div class="output-section">
+            <label for="ciphertext">Encrypted Text (Gold)</label>
+            <textarea id="ciphertext" readonly></textarea>
+        </div>
+
+        <h3>Decryption</h3>
+        <!-- Decryption Section -->
+        <div class="input-section">
+            <label for="encryptedText">Encrypted Text (Gold)</label>
+            <textarea id="encryptedText" placeholder="Paste the encrypted text..."></textarea>
+
+            <label for="decryptKey">Key</label>
+            <input type="text" id="decryptKey" placeholder="Enter key for decryption" />
+
+            <button id="decryptBtn">Transmute Back</button>
+        </div>
+
+        <div class="output-section">
+            <label for="decryptedText">Original Text (Lead) Restored</label>
+            <textarea id="decryptedText" readonly></textarea>
+        </div>
+    </section>
+
+    <footer>
+        <p>Crafted by Wizards</p>
+    </footer>
+
+    <script src="Ceaser.js"></script>
+    <script src="vernam.js"></script>
+    <script src="vignere.js"></script> <!-- Link to your existing Ceaser.js -->
+    <script src="homepage.js"></script>
+</body>
+</html>

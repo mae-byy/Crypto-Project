@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    background-image: url('20250518_2119_Alchemy Emblem_remix_01jvhzkp2fessrrnk7jm3we5n2.png'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;  /* Allow elements to stack vertically */
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for the quote box */
+    border-radius: 10px;
+    opacity: 0; /* Initially invisible */
+    transform: translateY(50px); /* Position it lower initially */
+    animation: fadeInUp 1s ease-out forwards; /* Trigger animation */
+    animation-delay: 0.5s; /* Delay the start of the animation */
+}
+
+/* Keyframe animation for the fade-in and slide-up effect */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Slide up to original position */
+    }
+}
+
+.quote-box {
+    display: inline-block;
+    max-width: 80%;
+    margin: 20px;
+}
+
+.quote {
+    font-size: 2em;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+footer {
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Style for the "Start Now" button with transparency */
+.start-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 6%; /* Increase the margin to push the button lower */
+    background-color: rgba(98, 98, 98, 0.7); /* Semi-transparent yellow background */
+    color: #908f91;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Initially below the container */
+    animation: fadeInUp 1s ease-out forwards; /* Animate the button */
+    animation-delay: 1s; /* Slight delay to make it appear after the container */
+}
+
+.start-btn:hover {
+    background-color: rgba(255, 153, 0, 0.9); /* Change button color on hover with more opacity */
+    transform: translateY(0); /* Slight hover effect (move up) */
+}

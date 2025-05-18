@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, input, textarea, button, header, footer, h1, h2, h3, p {
+    font-family: 'Work Sans', Arial, sans-serif;
+}
+
+body {
+    font-family: 'Work Sans', Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #5a5a5a;
+    background-size: cover;
+    background-position: center;
+    color: #d0d0d0;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-background-container {
+    position: relative;
+    background-image: url('20250518_2120_Logo Design_remix_01jvhzmt8eeyft210x39d3err1.png');
+    background-repeat: no-repeat;
+    background-position: center -45px;
+    background-size: contain; /* or 'cover' if you want full container coverage */
+    padding: 60px 20px 40px; /* enough padding to show image behind text */
+    border-radius: 10px; /* optional, if you want rounded corners */
+    color: #e67204; /* your text color */
+    text-align: center;
+    z-index: 0;
+}
+
+/* Optional: To make text clearly readable over the image */
+.logo-background-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5); /* dark transparent overlay */
+    border-radius: 10px; /* same as container */
+    z-index: -1; /* behind text and container content */
+}
+
+
+
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #e67204; /* muted gold text */
+    background-color: rgba(0, 0, 0, 0.8); /* dark transparent background */
+    border: 2px solid #e67204; /* subtle gold border */
+    border-radius: 8px;
+    box-shadow:
+      0 0 5px #e67204aa,  /* soft gold glow */
+      inset 0 0 8px #000000cc; /* inner shadow for depth */
+    appearance: none; /* remove default arrow */
+
+    background-image:
+      url("data:image/svg+xml;charset=US-ASCII,%3csvg%20width%3d%2210%22%20height%3d%227%22%20viewBox%3d%220%200%2010%207%22%20xmlns%3d%22http://www.w3.org/2000/svg%22%3e%3cpolygon%20points%3d%220%2c0%2010%2c0%205%2c7%22%20fill%3d%22%23bfb059%22/%3e%3c/svg%3e"),
+      linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(0,0,0,0.1));
+    background-repeat: no-repeat, repeat;
+    background-position: right 15px center, 0 0;
+    background-size: 10px 7px, 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+select:hover, select:focus {
+    border-color: #ffcc00;
+    box-shadow:
+      0 0 8px #ffcc00cc,
+      inset 0 0 10px #000000dd;
+    outline: none;
+    background-image:
+      url("data:image/svg+xml;charset=US-ASCII,%3csvg%20width%3d%2210%22%20height%3d%227%22%20viewBox%3d%220%200%2010%207%22%20xmlns%3d%22http://www.w3.org/2000/svg%22%3e%3cpolygon%20points%3d%220%2c0%2010%2c0%205%2c7%22%20fill%3d%22%23ffcc00%22/%3e%3c/svg%3e"),
+      linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(0,0,0,0.15));
+}
+
+
+
+.page-wrapper {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px 40px;
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #e67204
+    text-shadow: 0 0 4px rgba(191, 176, 89, 0.7);
+}
+
+p {
+    font-size: 1.2em;
+    color: #908f91;  /* soft gray */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6);  /* semi-transparent black */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    border: 3px solid rgba(191, 176, 89, 0.8); /* subtle gold border */
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #e67204;
+    margin-bottom: 10px;
+    text-shadow: 0 0 4px rgba(191, 176, 89, 0.7);
+}
+
+h3 {
+    color: #e67204;
+    margin-top: 20px;
+    text-shadow: 0 0 3px rgba(191, 176, 89, 0.6);
+}
+
+textarea, input {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(98, 98, 98, 0.7);  /* translucent dark gray */
+    color: #d0d0d0;
+    box-shadow: inset 0 0 8px rgba(150, 150, 150, 0.4);
+    font-family: 'Arial', sans-serif;
+    resize: vertical;
+}
+
+input[type="text"] {
+    height: auto;
+}
+
+button {
+    background-color: rgba(98, 98, 98, 0.7); /* translucent dark gray */
+    color: #908f91;  /* soft gray */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 8px rgba(98, 98, 98, 0.7);
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgba(255, 153, 0, 0.9); /* warm gold on hover */
+    color: #2e1a47;
+    transform: translateY(-3px);
+    box-shadow:
+        0 0 15px rgba(255, 153, 0, 0.9),
+        0 0 30px rgba(255, 153, 0, 0.6);
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.1em;
+    color: #908f91;
+    font-style: italic;
+}
+
+.input-section, .output-section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+@keyframes streetlightBlinkGlow {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    opacity: 1;
+    text-shadow:
+      0 0 3px #e67204,
+      0 0 6px #e67204,
+      0 0 10px #ffcc00,
+      0 0 15px #ffcc00;
+    color: #e67204;
+  }
+  10%, 30%, 50%, 70%, 90% {
+    opacity: 0.4;
+    text-shadow: none;
+    color: #776d24;
+  }
+}
+
+h1 {
+  margin-top: 40px;
+  font-size: 3em;
+  color: #e67204;
+
+}
+
